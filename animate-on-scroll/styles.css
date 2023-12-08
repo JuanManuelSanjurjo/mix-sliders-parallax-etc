@@ -1,0 +1,64 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+}
+
+h2{
+    font-size: 4rem;
+    background: rgb(253, 245, 245);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+div:nth-child(1){
+    background-image: url(img/fireplace.avif);
+    background-size: cover;
+}
+div:nth-child(2){
+    background: coral;
+}
+div:nth-child(3){
+    background-image: url(img/layered-waves-haikei\ \(1\).png);
+    background-color: rgb(168, 174, 255);
+    background-size: cover ;
+    background-attachment: fixed;
+}
+
+div:nth-child(4){
+    background: plum;
+    transition-delay: 600ms;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform:  translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+@media (prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
